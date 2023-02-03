@@ -28,40 +28,40 @@ app.post("/",function(req,res)
     var objects={
         weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
     };
-    if(Clss==6 && dob=="2008-08-05")
+    if(Clss==6 && dob=="2008-10-05")
     {
         Name="Aditya Thakur";
-        dateof="2008-08-05";
+        dateof="2008-10-05";
         Rank="1";
-        Marks="25";
-        Percentage="83.33%";
+        Marks="7.5";
+        Percentage="75%";
         res.render("index",{CurrentDay: din.toLocaleDateString("hi-IN",objects),name:Name,dob:dateof,marks:Marks,rank:Rank,percent:Percentage})
     }
-    else if(Clss==8 && dob=="2007-12-21")
+    else if(Clss==8 && dob=="2017-09-19")
     {
         Name="Udit Singh";
-        dateof="21-12-2007";
+        dateof="19-09-2017";
         Rank="4";
-        Marks="16.5";
-        Percentage="55%";
+        Marks="2.5";
+        Percentage="25%";
         res.render("index",{CurrentDay: din.toLocaleDateString("hi-IN",objects),name:Name,dob:dateof,marks:Marks,rank:Rank,percent:Percentage})
     }
-    else if(Clss==7 && dob=="2007-12-06")
+    else if(Clss==7 && dob=="2007-10-09")
     {
         Name="Rishabh Sengar";
-        dateof="06-12-2007";
-        Rank="6";
-        Marks="15.5";
-        Percentage="51.67%";
+        dateof="09-10-2007";
+        Rank="2";
+        Marks="3.75";
+        Percentage="37.5%";
         res.render("index",{CurrentDay: din.toLocaleDateString("hi-IN",objects),name:Name,dob:dateof,marks:Marks,rank:Rank,percent:Percentage})
     }
-    else if(Clss==8 && dob=="2004-12-30")
+    else if(Clss==8 && dob=="2002-03-12")
     {
         Name="Pushpendra Thakur";
-        dateof="30-12-2004";
-        Rank="2";
-        Marks="23";
-        Percentage="76.67%";
+        dateof="12-03-2002";
+        Rank="1";
+        Marks="7.5";
+        Percentage="75%";
         res.render("index",{CurrentDay: din.toLocaleDateString("hi-IN",objects),name:Name,dob:dateof,marks:Marks,rank:Rank,percent:Percentage})
     }
     else if(Clss==8 && dob=="2010-09-29")
@@ -69,26 +69,26 @@ app.post("/",function(req,res)
         Name="Prince Sengar";
         dateof="21-12-2007";
         Rank="5";
-        Marks="16";
-        Percentage="53.33%";
+        Marks="Ab";
+        Percentage="Ab";
         res.render("index",{CurrentDay: din.toLocaleDateString("hi-IN",objects),name:Name,dob:dateof,marks:Marks,rank:Rank,percent:Percentage})
     }
-    else if(Clss==8 && dob=="2001-01-01")
+    else if(Clss==8 && dob=="2011-11-11")
     {
         Name="Divy Pratap Singh";
-        dateof="01-01-2001";
-        Rank="5";
-        Marks="16";
-        Percentage="53.33%";
+        dateof="11-11-2011";
+        Rank="2";
+        Marks="3.75";
+        Percentage="37.5%";
         res.render("index",{CurrentDay: din.toLocaleDateString("hi-IN",objects),name:Name,dob:dateof,marks:Marks,rank:Rank,percent:Percentage})
     }
-    else if(Clss==8 && dob=="2009-10-05")
+    else if(Clss==8 && dob=="2007-10-05")
     {
         Name="Yogavansh Raj Singh";
-        dateof="05-10-2009";
+        dateof="05-10-2007";
         Rank="3";
-        Marks="22";
-        Percentage="73.33%";
+        Marks="3";
+        Percentage="30%";
         res.render("index",{CurrentDay: din.toLocaleDateString("hi-IN",objects),name:Name,dob:dateof,marks:Marks,rank:Rank,percent:Percentage})
     }
     else
@@ -109,37 +109,7 @@ app.post("/failure",function(req,res)
 
 app.post("/answerscript",function(req,res)
 {
-    if(Clss==8 && dob=="2007-12-21")
-    {
-    res.sendFile(__dirname+"/Udit Singh.pdf");
-    }
-    else if(Clss==8 && dob=="2009-10-05")
-{
-    res.sendFile(__dirname+"/Yogavansh Raj Singh.pdf");
-}
-else if(Clss==8 && dob=="2001-01-01")
-{
-    res.sendFile(__dirname+"/Divy Pratap Singh.pdf");
-}
-else if(Clss==8 && dob=="2010-09-29")
-{
-    res.sendFile(__dirname+"/Prince Sengar.pdf");
-}
-else if(Clss==8 && dob=="2004-12-30")
-{
-    res.sendFile(__dirname+"/Pushpendra Thakur.pdf");
-}
-else if(Clss==6 && dob=="2008-08-05")
-{
-    res.sendFile(__dirname+"/Aditya Thakur.pdf");
-}
-else if(Clss==7 && dob=="2007-12-06")
-{
-    res.sendFile(__dirname+"/Rishabh Sengar.pdf");
-}
-else{
-    res.sendFile(__dirname+"/failure.html");
-}
+    res.sendFile(__dirname+"/Answer Key.pdf");
 })
 
 
